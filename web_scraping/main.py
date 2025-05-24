@@ -8,9 +8,10 @@ movielist=[g.getText() for g in soup.find_all(name="h3",class_="title")]
 for d in range(len(movielist)):
     print(movielist[len(movielist)-d-1])
     
-
-# sel=soup.find_all(name="p")
-
+with open(movies.txt) as f:
+    for d in range(len(movielist)):
+        f.write(movielist[len(movielist)-d-1])
     
-# sel=soup.find(name="h1",id="name")    
-# print(sel.get_text())
+    
+    
+
